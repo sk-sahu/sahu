@@ -2,8 +2,7 @@
 % Please edit documentation in R/who.R
 \name{who}
 \alias{who}
-\title{Who
-This function will tail details about the author}
+\title{Introductory function}
 \usage{
 who()
 }
@@ -11,8 +10,7 @@ who()
 this returns name
 }
 \description{
-Who
-This function will tail details about the author
+This function will details about the author
 }
 \examples{
 who()

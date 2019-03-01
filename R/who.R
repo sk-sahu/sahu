@@ -1,6 +1,6 @@
-#' Who
-#
-#' This function will tail details about the author
+#' Introductory function
+#'
+#' This function will details about the author
 #'
 #' @return this returns name
 #'
