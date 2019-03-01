@@ -7,9 +7,6 @@ This function will tail details about the author}
 \usage{
 who()
 }
-\arguments{
-\item{blank}{Keep the function argument blank}
-}
 \value{
 this returns name
 }

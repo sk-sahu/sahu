@@ -1,7 +1,6 @@
 #' Who
 #
 #' This function will tail details about the author
-#' @param blank Keep the function argument blank
 #'
 #' @return this returns name
 #'

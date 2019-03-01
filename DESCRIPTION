@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Sangram Keshari Sahu
 Maintainer: Sangram Keshari Sahu <sangramsahu15@gmail.com>
 Description: Collection of some peersonal functions use in day to day work.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
