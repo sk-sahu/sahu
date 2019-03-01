@@ -1,0 +1,13 @@
+Package: sahu
+Type: Package
+Title: Compilation of Sahu's Functions
+Version: 0.1.0
+Author: Sangram Keshari Sahu
+Maintainer: Sangram Keshari Sahu <sangramsahu15@gmail.com>
+Description: Collection of some peersonal functions use in day to day work.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1
