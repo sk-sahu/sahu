@@ -9,3 +9,5 @@
 Personal R function library
 
 This is a work in progress. Just to try out added `who()`
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsk-sahu%2Fsahu.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsk-sahu%2Fsahu?ref=badge_large)
