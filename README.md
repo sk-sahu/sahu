@@ -4,7 +4,7 @@
 [![Travis build status](https://img.shields.io/travis/sk-sahu/sahu.svg?logo=travis)](https://travis-ci.org/sk-sahu/sahu)
 [![codecov](https://codecov.io/gh/sk-sahu/sahu/branch/master/graph/badge.svg)](https://codecov.io/gh/sk-sahu/sahu)
 [![Install with Anaconda][bioconda-badge]](https://anaconda.org/sangram_keshari/r-sahu)
-
+[![Coverage Status](https://coveralls.io/repos/github/sk-sahu/sahu/badge.svg?branch=master)](https://coveralls.io/github/sk-sahu/sahu?branch=master)
 
 
 Personal R function library
