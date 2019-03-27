@@ -8,3 +8,9 @@
 Personal R function library
 
 This is a work in progress. Just to try out added function `who()`
+
+#### Instructions to self:
+```r
+require(devtools)
+devtools::install_github("sk-sahu/sahu")
+```
