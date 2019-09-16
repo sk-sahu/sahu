@@ -23,7 +23,7 @@
         $("#submitbutton").attr("disabled", "disabled");
         //perform the request
         var req = ocpu.call("plotPCA3d", {
-          file : myfile
+          csvfile : myfile
           // header : myheader
         }, function(session){
           $("#printlink").attr("href", session.getLoc() + "R/.val/print")
@@ -73,16 +73,6 @@
       <li><a target="_blank" id="printlink">print</a></li>
       <li><a target="_blank" id="mdlink">markdown</a></li>
     </ol>
-
-    <p>
-     This page demonstrates how to upload a file. It works exactly the same as calling a function. We call <code>read.csav</code> so that it will be stored on the server as a data frame.
-    </p>
-    
-    <p>
-      <b>Note that HTML5 is required to upload files!</b> <br />
-      This means that this won't work in internet explorer version 9 or lower.
-      You need Firefox, Chrome, Safari or Internet Explorer 10+
-    </p>
     
   </body>
 </html>
