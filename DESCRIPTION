@@ -8,6 +8,9 @@ Description: Collection of some peersonal functions use in day to day work.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+    scatterplot3d
 Suggests: 
     testthat
+URL: https://sksahu.net/sahu
 RoxygenNote: 6.1.1
