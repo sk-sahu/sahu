@@ -1,0 +1,28 @@
+navbar:
+  structure:
+    left:  [home, intro, reference, articles, tutorials, news]
+    right: [github]
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/sk-sahu/sahu
+authors:
+  Sangram Keshari Sahu:
+    href: https://sksahu.net
+components:
+  twitter:
+     icon: "fab fa-twitter fa-lg"
+     href: http://twitter.com/sangram_ksahu
+url: http://sksahu.net/sahu
+template:
+  params:
+    bootswatch: spacelab
+    docsearch:
+      api_key: 2e9f9ddc444aa5797a0fad1345fddfc0
+      index_name: sahu_Rpackage
