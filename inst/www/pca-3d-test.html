@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Plot</title>
+    
+    <!-- Include order: first jquery, then opencpu.js, and then your code -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> 
+    <script src="//www.opencpu.org/js/archive/opencpu-0.4.js"></script>
+    
+    <script>
+    //init this script when the page has loaded
+    $(document).ready(function(){
+      $("#submitbutton").on("click", function(){
+        
+        var myfile = $("#csvfile")[0].files[0];
+        
+        if(!myfile){
+          alert("No file selected.");
+          return;
+        }
+
+        //disable the button to prevent multiple clicks
+        $("#submitbutton").attr("disabled", "disabled");
+        
+        //read the value for 'myname'
+        //var nfield = parseInt($("#nfield").val());
+        //var distfield = $("#distfield").val();
+        
+        //create the plot area on the plotdiv element
+        var req = $("#plotdiv").rplot("plotPCA3d", {
+          csvfile : myfile
+          //n : nfield,
+          //dist : distfield
+        })
+        //if R returns an error, alert the error message
+        req.fail(function(){
+          alert("Server error: " + req.responseText);
+        });
+        
+        //after request complete, re-enable the button 
+        req.always(function(){
+          $("#submitbutton").removeAttr("disabled")
+        });
+      });
+    });
+    </script>
+    
+    <style>
+      #plotdiv {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        border: solid gray 1px;
+      }
+    </style>
+    
+  </head>
+    
+  <body>
+    <h1>PCA-3D plotting</h1>
+    
+    <h1>Uploading a File</h1>
+    
+    <b>File</b> <input type="file" id="csvfile"> 
+    <br />
+
+    <br />
+    <button id="submitbutton" type="button">Upload CSV file and plot!</button>
+    <br>
+    
+    <div id="plotdiv"></div>      
+
+    <br />
+
+    <p>
+     This page shows the <tt>opencpu.js</tt> plot widget. We use <tt>jQuery.rplot</tt> plugin from the <tt>opencpu.js</tt> library to call the R function called <a href="../R/plotPCA3d">plotPCA3d</a>.</li> included in this R package. 
+    </p>
+    
+  </body>
+</html>
