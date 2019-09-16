@@ -12,7 +12,7 @@
     $(document).ready(function(){
       $("#submitbutton").on("click", function(){
         //arguments
-        var myheader = $("#header").val() == "true";
+        //var myheader = $("#header").val() == "true";
         var myfile = $("#csvfile")[0].files[0];
         
         if(!myfile){
@@ -23,8 +23,8 @@
         $("#submitbutton").attr("disabled", "disabled");
         //perform the request
         var req = ocpu.call("plotPCA3d", {
-          file : myfile,
-          header : myheader
+          file : myfile
+          // header : myheader
         }, function(session){
           $("#printlink").attr("href", session.getLoc() + "R/.val/print")
           $("#rdalink").attr("href", session.getLoc() + "R/.val/rda")
@@ -58,10 +58,6 @@
     <b>File</b> <input type="file" id="csvfile"> 
     <br />
     
-    <b>Header</b> <select id="header">
-      <option>true</option>
-      <option>false</option>
-    </select> 
     
     <br />
     <button id="submitbutton" type="button">Upload CSV file!</button>
