@@ -19,7 +19,7 @@ devtools::install_github("sk-sahu/sahu")
 
 More functionalities will be adding soon. 
 
-Use functions via API: https://sk-sahu.ocpu.io/sahu
+Use functions via API and Web-apps: https://sk-sahu.ocpu.io/sahu
 
 Web-apps on OpenCPU server using functions through API:
 * [plotPCA3d](https://sk-sahu.ocpu.io/sahu/www/plotPCA3d.html)
