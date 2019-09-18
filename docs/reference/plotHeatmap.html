@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Introductory function — who • sahu</title>
+<title>Plot Heatmap — plotHeatmap • sahu</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,8 @@
 
 
 
-<meta property="og:title" content="Introductory function — who" />
-<meta property="og:description" content="This function will details about the author" />
+<meta property="og:title" content="Plot Heatmap — plotHeatmap" />
+<meta property="og:description" content="This is a wrapper function to pheatmap taking a file instead of matrix" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -117,43 +117,49 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Introductory function</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sk-sahu/sahu/blob/master/R/who.R'><code>R/who.R</code></a></small>
-    <div class="hidden name"><code>who.Rd</code></div>
+    <h1>Plot Heatmap</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sk-sahu/sahu/blob/master/R/plotHeatmap.R'><code>R/plotHeatmap.R</code></a></small>
+    <div class="hidden name"><code>plotHeatmap.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function will details about the author</p>
+    <p>This is a wrapper function to <code><a href='https://rdrr.io/pkg/pheatmap/man/pheatmap.html'>pheatmap</a></code> taking a file instead of matrix</p>
     </div>
 
-    <pre class="usage"><span class='fu'>who</span>()</pre>
+    <pre class="usage"><span class='fu'>plotHeatmap</span>(<span class='no'>file</span>, <span class='no'>...</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>file</th>
+      <td><p>Input a .csv or .tsv file</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Further arguments to be passed to <code><a href='https://rdrr.io/pkg/pheatmap/man/pheatmap.html'>pheatmap</a></code></p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>this returns name</p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><a href='https://sksahu.net'>https://sksahu.net</a></p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><code>who</code></p></div>
+    <p>A heatmap</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>who</span>()</div><div class='output co'>#&gt; [1] "Sangram Keshari Sahu"</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='no'>file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"pasilla_gene_counts.csv"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"sahu"</span>)
+<span class='fu'>plotHeatmap</span>(<span class='no'>file</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>'heatmap title'</span>)</div><div class='img'><img src='plotHeatmap-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
     <h2>Author</h2>
-    <p>Sangram <a href='mailto:sangramsahu15@gmail.com'>sangramsahu15@gmail.com</a></p>
+    <p>Sangram Keshari Sahu</p>
   </div>
 </div>
 

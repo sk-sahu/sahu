@@ -23,7 +23,7 @@ who()
 \code{\link{who}}
 }
 \author{
-Sangram, \email{sangramsahu15@gmail.com}
+Sangram \email{sangramsahu15@gmail.com}
 }
 \keyword{function}
 \keyword{initial}

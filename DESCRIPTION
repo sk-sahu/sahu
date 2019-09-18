@@ -9,7 +9,11 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
-    scatterplot3d
+    scatterplot3d,
+    pheatmap
+Imports:
+    utils,
+    stats
 Suggests: 
     testthat
 URL: https://github.com/sk-sahu/sahu

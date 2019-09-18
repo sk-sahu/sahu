@@ -2,7 +2,7 @@
 #'
 #' This function returns an 3D PCA plot
 #' 
-#' @param csvfile Input a CSV file 
+#' @param file Input a .csv or .tsv file
 #'
 #' @return a PCA-plot
 #'
@@ -10,22 +10,16 @@
 #' @keywords pca-3d
 #'
 #' @examples
-#' file <- system.file("extdata", "transcript_count_matrix.csv", package = "sahu")
+#' file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
 #' plotPCA3d(file)
 #'
 #' @importFrom stats prcomp
-#' @importFrom utils read.csv
 #' @importFrom scatterplot3d scatterplot3d
 #' 
 #' @export
-plotPCA3d <- function(csvfile){
-  
-  if(!grepl(".csv$", csvfile)){
-    stop("Uploaded file must be a .csv file!")
-  }
-  data <- read.csv(csvfile, header = TRUE, row.names = 1)
-
-  pca_data <- prcomp(t(data))
+plotPCA3d <- function(file){
+  df <- read_file(file)
+  pca_data <- prcomp(t(df))
   with(as.data.frame(pca_data$x), {
     s3d <- scatterplot3d(PC1, PC2, PC3, 
                          pch = 19, highlight.3d = TRUE ) 

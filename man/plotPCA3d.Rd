@@ -4,10 +4,10 @@
 \alias{plotPCA3d}
 \title{Plot 3D-PCA}
 \usage{
-plotPCA3d(csvfile)
+plotPCA3d(file)
 }
 \arguments{
-\item{csvfile}{Input a CSV file}
+\item{file}{Input a .csv or .tsv file}
 }
 \value{
 a PCA-plot
@@ -16,7 +16,7 @@ a PCA-plot
 This function returns an 3D PCA plot
 }
 \examples{
-file <- system.file("extdata", "transcript_count_matrix.csv", package = "sahu")
+file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
 plotPCA3d(file)
 
 }
