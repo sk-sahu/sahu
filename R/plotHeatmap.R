@@ -19,5 +19,5 @@
 #' @export
 plotHeatmap <- function(file, ...){
   df <- read_file(file)
-  pheatmap(df, ...)
+  pheatmap::pheatmap(df, ...)
 }

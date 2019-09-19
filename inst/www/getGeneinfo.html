@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="3D-PCA Plotting App">
+<html lang="en" ng-app="Get Gene info">
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="3D-PCA Ploting Web app">
+    <meta name="description" content="Get gene info">
     <meta name="author" content="Sangram Keshari Sahu">
 
-    <title>Plot 3D-PCA</title>
+    <title>Get Gene Info</title>
     
     <!-- Include order: first jquery, then opencpu.js, and then your code -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -29,10 +29,13 @@
     $(document).ready(function(){
       $("#submitbutton").on("click", function(){
         
-        var myfile = $("#csvfile")[0].files[0];
+        //input
+        //create snippet argument
+        //var x = new ocpu.Snippet($("#input").val());
+        var input_gene = $("#gene_id").val();
         
-        if(!myfile){
-          alert("No file selected.");
+        if(!input_gene){
+          alert("No gene input.");
           return;
         }
 
@@ -40,9 +43,15 @@
         $("#submitbutton").attr("disabled", "disabled");
         
         //create the plot area on the plotdiv element
-        var req = $("#plotdiv").rplot("plotPCA3d", {
-          csvfile : myfile
-        })
+        //perform the request
+        var req = ocpu.call("getGeneinfo", {
+            "ensembl_id" : input_gene
+        }, function(session){
+            session.getConsole(function(outtxt){
+                $("#output").text(outtxt); 
+            });
+        });
+        
         //if R returns an error, alert the error message
         req.fail(function(){
           alert("Server error: " + req.responseText);
@@ -69,34 +78,32 @@
   <!-- Core structure-->  
   <body>
     <div class="navbar navbar-default" role="navigation">
-        <a class="navbar-brand" href="#">Plot 3D-PCA</a>
+        <a class="navbar-brand" href="#">Get Gene Info</a>
           <a href="https://github.com/sk-sahu/sahu"><i class="fa fa-github"></i></a>
     </div>
     <div class="container">
 
       <div class="panel panel-default">
         <div class="panel-heading"> 
-          <h1>Plot 3D-PCA</h1>
-          <p>This tool aims to plot 3D-PCA</p>
+          <h1>Get Gene Info</h1>
+          <p>This tool aims to get gene info from various sources</p>
         </div>
         <div class="panel-body">
           <form class="form-inline">
               <div class="form-group mb-2">
-                  <label>Upload a CSV file:</label>
-                  <input type="file" class="form-control-file" id="csvfile">
+                  <label>Input an Ensembl ID:</label>
+                  <input type="text" class="form-control-file" id="gene_id" value="ENSG00000157764">
               </div>
-              <button type="button" class="btn btn-primary" id="submitbutton">Upload and Plot!</button>
+              <button type="button" class="btn btn-primary" id="submitbutton">get info!</button>
           </form>
         </div>
-
-        <div class="center-block" id="plotdiv"></div>      
 
       </div>
     </div><!-- /.container -->
     <hr>
       <div class="container footer text-muted">
           <p>
-            Made using <tt>jQuery.rplot</tt> plugin from the <tt>opencpu.js</tt> library to call the R function called <a href="../R/plotPCA3d">plotPCA3d</a></li> included in <a href="https://sksahu.net/sahu">this</a> R package. 
+            Made using <tt>jQuery.rplot</tt> plugin from the <tt>opencpu.js</tt> library to call the R function called <a href="../R/getGeneinfo">plotPCA3d</a> included in <a href="https://sksahu.net/sahu">this</a> R package. 
           </p>
       </div>
     <hr>

@@ -13,7 +13,10 @@ Depends:
     pheatmap
 Imports:
     utils,
-    stats
+    stats,
+    httr,
+    jsonlite,
+    xml2
 Suggests: 
     testthat
 URL: https://github.com/sk-sahu/sahu
