@@ -21,9 +21,9 @@ getGeneinfo <- function(ensembl_id){
   server <- "http://rest.ensembl.org"
   ext <- paste("/xrefs/id/",ensembl_id,"?", sep = "")
   
-  r <- GET(paste(server, ext, sep = ""), content_type("application/json"))
+  r <- httr::GET(paste(server, ext, sep = ""), content_type("application/json"))
   
-  stop_for_status(r)
+  httr::stop_for_status(r)
   
   # use this if you get a simple nested list back, otherwise inspect its structure
   # head(data.frame(t(sapply(content(r),c))))

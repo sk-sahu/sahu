@@ -16,7 +16,9 @@ Imports:
     stats,
     httr,
     jsonlite,
-    xml2
+    xml2,
+    leaflet,
+    htmlwidgets
 Suggests: 
     testthat
 URL: https://github.com/sk-sahu/sahu

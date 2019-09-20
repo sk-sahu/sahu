@@ -13,6 +13,9 @@
 #' who()
 #'
 #' @export
-who <- function() {
-  print("Sangram Keshari Sahu")
+who <- function(){
+  print("")
+  message("Name: Sangram Keshari Sahu")
+  message("website: https://sksahu.net")
 }
+
