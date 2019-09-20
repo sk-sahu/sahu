@@ -22,7 +22,22 @@
     <!-- Framework CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- datatable -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
     
+
+    <script type="text/javascript">
+      function makeHeaders(colnames) {
+        var str = "";
+        for (var i = 0; i < colnames.length; i++) {
+          str += "<th>" + colnames[i] + "</th>";
+        }
+        return (str);
+      }
+    </script>
+
     <!-- Core -->
     <script>
     //init this script when the page has loaded
@@ -30,9 +45,6 @@
       $("#submitbutton").on("click", function(){
         
         //input
-        //create snippet argument
-        //var input_gene = new ocpu.Snippet($("#gene_id").val());
-        //var input_gene = $("#gene_id").val();
         var input_gene = document.getElementById("gene_id").value;
         
         if(!input_gene){
@@ -47,13 +59,29 @@
         //perform the request
         var req = ocpu.call("getGeneinfo", {
             ensembl_id : input_gene
-        }, function(output){
-          $("tbody").empty();
-          $.each(output, function(index, value){
-            var html = "<tr><td>" + value.dbname + "</td><td>" + value.primary_id + "</td><td>" + value.description + "</td></tr>";
-            $("tbody").append(html);
-          });
-        });
+        }, function(output) {
+            // get the column names
+            var colnames = Object.keys(output[0]);
+            // create the JSON array for the columns required by DataTable
+            var columns = [];
+            for (i = 0; i < colnames.length; i++) {
+              var obj = {};
+              obj['data'] = colnames[i]
+              columns.push(obj);
+            }
+            // first make the header row, then run DataTable
+            $.when($.ajax({
+              success: function() {
+                $('#mytable thead tr').append(makeHeaders(colnames));
+              }
+            })).done(function() {
+              $('#mytable').DataTable({
+                data: output,
+                columns: columns
+              })
+            });
+          }
+        );
         
         //if R returns an error, alert the error message
         req.fail(function(){
@@ -101,10 +129,14 @@
           </form>
         </div>
 
-        <table class="table table-hover">
-          <thead><tr><th>DB_name</th><th>Primary_ID</th><th>Description</th></tr></thead>
-          <tbody></tbody>
-        </table>
+        <div style="width:600px;display:block;margin-left:auto;margin-right:auto">
+          <table id="mytable" class="display">
+            <thead>
+              <tr role="row"></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
         
       </div>
     </div><!-- /.container -->
