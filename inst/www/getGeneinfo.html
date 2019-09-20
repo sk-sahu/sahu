@@ -14,15 +14,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="//www.opencpu.org/js/archive/opencpu-0.4.js"></script>
 
-    <!-- OpenCPU client library -->
+    <!-- OpenCPU client library 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//cdn.opencpu.org/opencpu-0.4.js"></script>
-
+    -->
 
     <!-- Framework CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     
+
+    <script type="text/javascript">
+      function makeHeaders(colnames) {
+        var str = "";
+        for (var i = 0; i < colnames.length; i++) {
+          str += "<th>" + colnames[i] + "</th>";
+        }
+        return (str);
+      }
+    </script>
+
     <!-- Core -->
     <script>
     //init this script when the page has loaded
@@ -30,9 +45,6 @@
       $("#submitbutton").on("click", function(){
         
         //input
-        //create snippet argument
-        //var input_gene = new ocpu.Snippet($("#gene_id").val());
-        //var input_gene = $("#gene_id").val();
         var input_gene = document.getElementById("gene_id").value;
         
         if(!input_gene){
@@ -45,13 +57,31 @@
         
         //create the plot area on the plotdiv element
         //perform the request
-        var req = ocpu.call("getGeneinfo", {
+        var req = ocpu.rpc("getGeneinfo", {
             ensembl_id : input_gene
-        }, function(session){
-            session.getConsole(function(outtxt){
-                $("#output").text(outtxt); 
+        }, function(output) {
+            // get the column names
+            var colnames = Object.keys(output[0]);
+            // create the JSON array for the columns required by DataTable
+            var columns = [];
+            for (i = 0; i < colnames.length; i++) {
+              var obj = {};
+              obj['data'] = colnames[i]
+              columns.push(obj);
+            }
+            // first make the header row, then run DataTable
+            $.when($.ajax({
+              success: function() {
+                $('#mytable thead tr').append(makeHeaders(colnames));
+              }
+            })).done(function() {
+              $('#mytable').DataTable({
+                data: output,
+                columns: columns
+              })
             });
-        });
+          }
+        );
         
         //if R returns an error, alert the error message
         req.fail(function(){
@@ -72,6 +102,9 @@
         width: 600px;
         height: 400px;
         border: solid gray 1px;
+      }
+      div.container {
+        width: 80%;
       }
     </style>
   </head>
@@ -99,10 +132,18 @@
           </form>
         </div>
 
-        <pre><code id="output"></code></pre>
+        <div>
+          <table id="mytable" class="display", style="width:100%">
+            <thead>
+              <tr role="row"></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
         
       </div>
     </div><!-- /.container -->
+
     <hr>
       <div class="container footer text-muted">
           <p>
