@@ -1,0 +1,23 @@
+---
+title: "Function call using API"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Programming with dplyr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+The functions in this package can be called using API.
+
+server: https://sk-sahu.ocpu.io/sahu/R/
+
+## API Endpoints
+
+| Function | Method | Description | 
+|----------|--------|-------------|
+| `getGeneinfo()` |GET getGeneinfo/:ensembl_id | Retrive gene info from diffrent DB |
+
+Example
+```
+curl https://sk-sahu.ocpu.io/sahu/R/getGeneinfo -d "ensembl_id='ENSG00000157764'"
+```

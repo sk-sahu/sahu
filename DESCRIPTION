@@ -20,7 +20,10 @@ Imports:
     leaflet,
     htmlwidgets
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
 URL: https://github.com/sk-sahu/sahu
 BugReports: https://github.com/sk-sahu/sahu/issues
 RoxygenNote: 6.1.1
