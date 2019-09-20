@@ -14,10 +14,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="//www.opencpu.org/js/archive/opencpu-0.4.js"></script>
 
-    <!-- OpenCPU client library -->
+    <!-- OpenCPU client library 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//cdn.opencpu.org/opencpu-0.4.js"></script>
-
+    -->
 
     <!-- Framework CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
         
         //create the plot area on the plotdiv element
         //perform the request
-        var req = ocpu.call("getGeneinfo", {
+        var req = ocpu.rpc("getGeneinfo", {
             ensembl_id : input_gene
         }, function(output) {
             // get the column names
