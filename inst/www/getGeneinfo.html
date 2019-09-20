@@ -31,8 +31,9 @@
         
         //input
         //create snippet argument
-        //var x = new ocpu.Snippet($("#input").val());
-        var input_gene = $("#gene_id").val();
+        //var input_gene = new ocpu.Snippet($("#gene_id").val());
+        //var input_gene = $("#gene_id").val();
+        var input_gene = document.getElementById("gene_id").value;
         
         if(!input_gene){
           alert("No gene input.");
@@ -98,6 +99,8 @@
           </form>
         </div>
 
+        <pre><code id="output"></code></pre>
+        
       </div>
     </div><!-- /.container -->
     <hr>

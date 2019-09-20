@@ -29,7 +29,7 @@
     $(document).ready(function(){
       $("#submitbutton").on("click", function(){
         
-        var myfile = $("#csvfile")[0].files[0];
+        var myfile = $("#file")[0].files[0];
         
         if(!myfile){
           alert("No file selected.");
@@ -83,7 +83,7 @@
           <form class="form-inline">
               <div class="form-group mb-2">
                   <label>Upload a CSV file:</label>
-                  <input type="file" class="form-control-file" id="csvfile">
+                  <input type="file" class="form-control-file" id="file">
               </div>
               <button type="button" class="btn btn-primary" id="submitbutton">Upload and Plot!</button>
           </form>
