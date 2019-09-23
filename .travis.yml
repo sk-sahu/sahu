@@ -4,6 +4,8 @@ language: R
 sudo: false
 cache: packages
 
+warnings_are_errors: false
+
 before_install:
     - Rscript -e 'install.packages("devtools")'
     - Rscript -e 'devtools::install(dependencies=TRUE)'
