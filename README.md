@@ -4,7 +4,6 @@
 [![Travis build status](https://img.shields.io/travis/sk-sahu/sahu.svg?logo=travis)](https://travis-ci.org/sk-sahu/sahu)
 [![codecov](https://codecov.io/gh/sk-sahu/sahu/branch/master/graph/badge.svg)](https://codecov.io/gh/sk-sahu/sahu)
 [![Install with Anaconda][bioconda-badge]](https://anaconda.org/sangram_keshari/r-sahu)
-[![Coverage Status](https://coveralls.io/repos/github/sk-sahu/sahu/badge.svg?branch=master)](https://coveralls.io/github/sk-sahu/sahu?branch=master)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsk-sahu%2Fsahu.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsk-sahu%2Fsahu?ref=badge_shield)
 
 Compilation of some helpful R utility functions used in daily basis.
