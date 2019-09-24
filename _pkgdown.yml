@@ -22,7 +22,6 @@ components:
 url: http://sksahu.net/sahu
 template:
   params:
-    bootswatch: spacelab
     docsearch:
       api_key: 2e9f9ddc444aa5797a0fad1345fddfc0
       index_name: sahu_Rpackage
