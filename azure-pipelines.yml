@@ -3,7 +3,7 @@ resources:
     - repository: r-azure-pipelines
       type: github
       name: r-lib/r-azure-pipelines
-      endpoint: sangramsahu15
+      endpoint: sk-sahu
 
 jobs:
   - template: azure-tidyverse.yml@r-azure-pipelines
