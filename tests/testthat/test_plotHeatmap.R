@@ -1,5 +1,3 @@
-load(file.path("test_data.RData"))
-
 test_that('testing pheatmap graphics', {
   file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
   out <- plotHeatmap(file)
