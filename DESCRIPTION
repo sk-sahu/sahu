@@ -21,6 +21,7 @@ Imports:
     htmlwidgets
 Suggests: 
     testthat,
+    vdiffr,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
