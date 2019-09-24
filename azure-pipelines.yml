@@ -6,5 +6,11 @@ resources:
       endpoint: sk-sahu
 
 jobs:
-  - template: azure-tidyverse.yml@r-azure-pipelines
-  - template: templates/pkg-install_dependencies.yml@r-azure-pipelines
+  - job: "Install remote"
+    steps:
+      - bash: |
+          Rscript -e "install.packages(c('remotes', 'rcmdcheck'))"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+        displayName: 'Install package dependencies'
+      - template: azure-tidyverse.yml@r-azure-pipelines
+  
