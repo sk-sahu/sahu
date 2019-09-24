@@ -1,5 +1,6 @@
 # sahu
 
+[![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sk-sahu/sahu/master?urlpath=rstudio)
 [![Build status](https://ci.appveyor.com/api/projects/status/3au402927srg81by?svg=true)](https://ci.appveyor.com/project/sk-sahu/sahu)
 [![Travis build status](https://img.shields.io/travis/sk-sahu/sahu.svg?logo=travis)](https://travis-ci.org/sk-sahu/sahu)
 [![codecov](https://codecov.io/gh/sk-sahu/sahu/branch/master/graph/badge.svg)](https://codecov.io/gh/sk-sahu/sahu)
