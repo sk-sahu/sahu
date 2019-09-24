@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage line-rate="0.771428571428572" branch-rate="0" lines-covered="27" lines-valid="35" branches-covered="0" branches-valid="0" complexity="0" version="3.3.1" timestamp="2019-09-24 15:33:04">
+  <sources/>
+  <packages>
+    <package name="sahu" line-rate="0.771428571428572" branch-rate="0" complexity="0">
+      <classes>
+        <class name="geneinfo.R" filename="R/geneinfo.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="getGeneinfo" signature="" line-rate="1" branch-rate="0">
+              <lines>
+                <line number="21" hits="1" branch="false"/>
+                <line number="22" hits="1" branch="false"/>
+                <line number="24" hits="1" branch="false"/>
+                <line number="26" hits="1" branch="false"/>
+                <line number="30" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="false"/>
+            <line number="22" hits="1" branch="false"/>
+            <line number="24" hits="1" branch="false"/>
+            <line number="26" hits="1" branch="false"/>
+            <line number="30" hits="1" branch="false"/>
+          </lines>
+        </class>
+        <class name="make_map.R" filename="R/make_map.R" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="make_map" signature="" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="12" hits="0" branch="false"/>
+                <line number="13" hits="0" branch="false"/>
+                <line number="14" hits="0" branch="false"/>
+                <line number="15" hits="0" branch="false"/>
+                <line number="16" hits="0" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="false"/>
+            <line number="13" hits="0" branch="false"/>
+            <line number="14" hits="0" branch="false"/>
+            <line number="15" hits="0" branch="false"/>
+            <line number="16" hits="0" branch="false"/>
+          </lines>
+        </class>
+        <class name="plotHeatmap.R" filename="R/plotHeatmap.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="plotHeatmap" signature="" line-rate="1" branch-rate="0">
+              <lines>
+                <line number="21" hits="1" branch="false"/>
+                <line number="22" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="false"/>
+            <line number="22" hits="1" branch="false"/>
+          </lines>
+        </class>
+        <class name="plotPCA3d.R" filename="R/plotPCA3d.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="plotPCA3d" signature="" line-rate="1" branch-rate="0">
+              <lines>
+                <line number="21" hits="1" branch="false"/>
+                <line number="22" hits="1" branch="false"/>
+                <line number="23" hits="1" branch="false"/>
+                <line number="24" hits="1" branch="false"/>
+                <line number="25" hits="1" branch="false"/>
+                <line number="26" hits="1" branch="false"/>
+                <line number="27" hits="1" branch="false"/>
+                <line number="28" hits="1" branch="false"/>
+                <line number="29" hits="1" branch="false"/>
+                <line number="30" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="false"/>
+            <line number="22" hits="1" branch="false"/>
+            <line number="23" hits="1" branch="false"/>
+            <line number="24" hits="1" branch="false"/>
+            <line number="25" hits="1" branch="false"/>
+            <line number="26" hits="1" branch="false"/>
+            <line number="27" hits="1" branch="false"/>
+            <line number="28" hits="1" branch="false"/>
+            <line number="29" hits="1" branch="false"/>
+            <line number="30" hits="1" branch="false"/>
+          </lines>
+        </class>
+        <class name="read_file.R" filename="R/read_file.R" line-rate="0.5" branch-rate="0" complexity="0">
+          <methods>
+            <method name="read_file" signature="" line-rate="0.5" branch-rate="0">
+              <lines>
+                <line number="4" hits="2" branch="false"/>
+                <line number="5" hits="0" branch="false"/>
+                <line number="6" hits="2" branch="false"/>
+                <line number="7" hits="2" branch="false"/>
+                <line number="8" hits="0" branch="false"/>
+                <line number="9" hits="0" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="2" branch="false"/>
+            <line number="5" hits="0" branch="false"/>
+            <line number="6" hits="2" branch="false"/>
+            <line number="7" hits="2" branch="false"/>
+            <line number="8" hits="0" branch="false"/>
+            <line number="9" hits="0" branch="false"/>
+          </lines>
+        </class>
+        <class name="resave.R" filename="R/resave.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="resave" signature="" line-rate="1" branch-rate="0">
+              <lines>
+                <line number="10" hits="1" branch="false"/>
+                <line number="11" hits="1" branch="false"/>
+                <line number="12" hits="1" branch="false"/>
+                <line number="13" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="1" branch="false"/>
+            <line number="11" hits="1" branch="false"/>
+            <line number="12" hits="1" branch="false"/>
+            <line number="13" hits="1" branch="false"/>
+          </lines>
+        </class>
+        <class name="who.R" filename="R/who.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="who" signature="" line-rate="1" branch-rate="0">
+              <lines>
+                <line number="17" hits="1" branch="false"/>
+                <line number="18" hits="1" branch="false"/>
+                <line number="19" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="1" branch="false"/>
+            <line number="18" hits="1" branch="false"/>
+            <line number="19" hits="1" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
