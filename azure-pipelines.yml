@@ -2,7 +2,7 @@ resources:
   repositories:
     - repository: r-azure-pipelines
       type: github
-      name: r-lib/r-azure-pipelines
+      name: sk-sahu/r-azure-pipelines
       endpoint: sk-sahu
 
 jobs:
