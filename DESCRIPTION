@@ -10,18 +10,17 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     scatterplot3d,
-    pheatmap
+    pheatmap,
+    leaflet,
 Imports:
     utils,
     stats,
     httr,
     jsonlite,
     xml2,
-    leaflet,
     htmlwidgets
 Suggests: 
     testthat,
-    vdiffr,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
