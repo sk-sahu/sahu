@@ -15,9 +15,10 @@
 #' plotHeatmap(file, main='heatmap title')
 #'
 #' @importFrom pheatmap pheatmap
+#' @importFrom gplots greenred
 #' 
 #' @export
 plotHeatmap <- function(file, ...){
   df <- read_file(file)
-  pheatmap::pheatmap(df, ...)
+  pheatmap::pheatmap(df, color = greenred(75), border_color = NA, ...)
 }

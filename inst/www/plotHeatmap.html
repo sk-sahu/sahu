@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Heatmap Plotting App">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3Heatmap Plotting Web App">
+    <meta name="author" content="Sangram Keshari Sahu">
+
+    <title>Plot Hetamap</title>
+    
+    <!-- Include order: first jquery, then opencpu.js, and then your code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="//www.opencpu.org/js/archive/opencpu-0.4.js"></script>
+
+    <!-- OpenCPU client library 
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdn.opencpu.org/opencpu-0.4.js"></script>
+    -->
+
+    <!-- Framework CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <!-- Core -->
+    <script>
+    //init this script when the page has loaded
+    $(document).ready(function(){
+      $("#submitbutton").on("click", function(){
+        
+        var myfile = $("#file")[0].files[0];
+        
+        if(!myfile){
+          alert("No file selected.");
+          return;
+        }
+
+        //disable the button to prevent multiple clicks
+        $("#submitbutton").attr("disabled", "disabled");
+        
+        //create the plot area on the plotdiv element
+        var req = $("#plotdiv").rplot("plotHeatmap", {
+          file : myfile
+        })
+        //if R returns an error, alert the error message
+        req.fail(function(){
+          alert("Server error: " + req.responseText);
+        });
+        
+        //after request complete, re-enable the button 
+        req.always(function(){
+          $("#submitbutton").removeAttr("disabled")
+        });
+      });
+    });
+    </script>
+    
+    <style>
+      #plotdiv {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        border: solid gray 1px;
+      }
+    </style>
+  </head>
+  
+  <!-- Core structure-->  
+  <body>
+    
+    <div class="navbar navbar-default" role="navigation">
+        <a class="navbar-brand" href="https://sk-sahu.ocpu.io/sahu/www">R Utility Apps</a>
+    </div>
+
+    <!-- App container starts here -->
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading"> 
+          <h1>Plot Heatmap</h1>
+          <p>This tool aims to plot Heatmap</p>
+        </div>
+        <div class="panel-body">
+          <form class="form-inline">
+              <div class="form-group mb-2">
+                  <label>Upload a CSV file:</label>
+                  <input type="file" class="form-control-file" id="file">
+              </div>
+              <button type="button" class="btn btn-primary" id="submitbutton">Upload and Plot!</button>
+          </form>
+        </div>
+
+        <div class="center-block" id="plotdiv"></div>      
+
+      </div>
+    </div><!-- /.container -->
+
+    <hr>
+      <div class="container footer text-muted">
+          <p>
+            Using API call from functions in <a href="https://sk-sahu.github.io/sahu">Sahu</a> R package and plugin from the <tt>opencpu.js</tt> library.  
+          </p>
+      </div>
+  </body>
+</html>
