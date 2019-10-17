@@ -10,7 +10,7 @@
 #' @keywords pca-3d
 #'
 #' @examples
-#' file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
+#' file <- system.file("extdata", "expr_matrix.csv", package = "sahu")
 #' plotPCA3d(file)
 #'
 #' @importFrom stats prcomp

@@ -11,7 +11,7 @@
 #' @keywords heatmap
 #'
 #' @examples
-#' file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
+#' file <- system.file("extdata", "expr_matrix.csv", package = "sahu")
 #' plotHeatmap(file, main='heatmap title')
 #'
 #' @importFrom pheatmap pheatmap
@@ -20,5 +20,5 @@
 #' @export
 plotHeatmap <- function(file, ...){
   df <- read_file(file)
-  pheatmap::pheatmap(df, color = greenred(75), border_color = NA, ...)
+  pheatmap::pheatmap(df, color = greenred(75), border_color = NA, scale = "row", ...)
 }

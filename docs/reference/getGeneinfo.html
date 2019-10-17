@@ -157,34 +157,34 @@ external references in other databases using <a href='http://rest.ensembl.org/do
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>mygeneinfo</span> <span class='kw'>&lt;-</span> <span class='fu'>getGeneinfo</span>(<span class='st'>"ENSG00000157764"</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>mygeneinfo</span>)</div><div class='output co'>#&gt;                      info_text       dbname info_type
-#&gt; 1                              ENS_LRG_gene    DIRECT
-#&gt; 2                              ArrayExpress    DIRECT
-#&gt; 3                                EntrezGene DEPENDENT
-#&gt; 4 Generated via ensembl_manual         HGNC    DIRECT
-#&gt; 5                                  MIM_GENE DEPENDENT
-#&gt; 6                                MIM_MORBID DEPENDENT
-#&gt;                                                       display_id
-#&gt; 1                                                        LRG_299
-#&gt; 2                                                ENSG00000157764
-#&gt; 3                                                           BRAF
-#&gt; 4                                                           BRAF
-#&gt; 5 V-RAF MURINE SARCOMA VIRAL ONCOGENE HOMOLOG B1; BRAF [*164757]
-#&gt; 6                CARDIOFACIOCUTANEOUS SYNDROME 1; CFC1 [#115150]
-#&gt;        primary_id synonyms             db_display_name version
-#&gt; 1         LRG_299     NULL LRG display in Ensembl gene       0
-#&gt; 2 ENSG00000157764     NULL            Expression Atlas       0
-#&gt; 3             673     NULL                   NCBI gene       0
-#&gt; 4       HGNC:1097    BRAF1                 HGNC Symbol       0
-#&gt; 5          164757     NULL                    MIM gene       0
-#&gt; 6          115150     NULL                  MIM morbid       0
-#&gt;                                                                                                                                              description
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>mygeneinfo</span>)</div><div class='output co'>#&gt;                                                                                                                                              description
 #&gt; 1                                                                                                                Locus Reference Genomic record for BRAF
 #&gt; 2                                                                                                                                                   NULL
 #&gt; 3                                                                                                          B-Raf proto-oncogene, serine/threonine kinase
 #&gt; 4                                                                                                          B-Raf proto-oncogene, serine/threonine kinase
 #&gt; 5 V-RAF MURINE SARCOMA VIRAL ONCOGENE HOMOLOG B1; BRAF;;ONCOGENE BRAF;;BRAF1;;RAFB1BRAF/AKAP9 FUSION GENE, INCLUDED;;BRAF/KIAA1549 FUSION GENE, INCLUDED
-#&gt; 6                                                                                              CARDIOFACIOCUTANEOUS SYNDROME 1; CFC1;;CFC SYNDROME;;CFCS</div><div class='input'>
+#&gt; 6                                                                                              CARDIOFACIOCUTANEOUS SYNDROME 1; CFC1;;CFC SYNDROME;;CFCS
+#&gt;   version             db_display_name      primary_id
+#&gt; 1       0 LRG display in Ensembl gene         LRG_299
+#&gt; 2       0            Expression Atlas ENSG00000157764
+#&gt; 3       0                   NCBI gene             673
+#&gt; 4       0                 HGNC Symbol       HGNC:1097
+#&gt; 5       0                    MIM gene          164757
+#&gt; 6       0                  MIM morbid          115150
+#&gt;                                                       display_id synonyms
+#&gt; 1                                                        LRG_299     NULL
+#&gt; 2                                                ENSG00000157764     NULL
+#&gt; 3                                                           BRAF     NULL
+#&gt; 4                                                           BRAF    BRAF1
+#&gt; 5 V-RAF MURINE SARCOMA VIRAL ONCOGENE HOMOLOG B1; BRAF [*164757]     NULL
+#&gt; 6                CARDIOFACIOCUTANEOUS SYNDROME 1; CFC1 [#115150]     NULL
+#&gt;                      info_text       dbname info_type
+#&gt; 1                              ENS_LRG_gene    DIRECT
+#&gt; 2                              ArrayExpress    DIRECT
+#&gt; 3                                EntrezGene DEPENDENT
+#&gt; 4 Generated via ensembl_manual         HGNC    DIRECT
+#&gt; 5                                  MIM_GENE DEPENDENT
+#&gt; 6                                MIM_MORBID DEPENDENT</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

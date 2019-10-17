@@ -18,7 +18,7 @@ A heatmap
 This is a wrapper function to \code{\link[pheatmap]{pheatmap}} taking a file instead of matrix
 }
 \examples{
-file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
+file <- system.file("extdata", "expr_matrix.csv", package = "sahu")
 plotHeatmap(file, main='heatmap title')
 
 }

@@ -16,7 +16,7 @@ a PCA-plot
 This function returns an 3D PCA plot
 }
 \examples{
-file <- system.file("extdata", "pasilla_gene_counts.csv", package = "sahu")
+file <- system.file("extdata", "expr_matrix.csv", package = "sahu")
 plotPCA3d(file)
 
 }
