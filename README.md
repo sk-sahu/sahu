@@ -1,11 +1,14 @@
 # sahu
 
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sk-sahu/sahu/master?urlpath=rstudio)
 [![Build Status](https://dev.azure.com/sahu-sk/r-sahu/_apis/build/status/sk-sahu.sahu?branchName=master)](https://dev.azure.com/sahu-sk/r-sahu/_build/latest?definitionId=1&branchName=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/3au402927srg81by?svg=true)](https://ci.appveyor.com/project/sk-sahu/sahu)
 [![Travis build status](https://img.shields.io/travis/sk-sahu/sahu.svg?logo=travis)](https://travis-ci.org/sk-sahu/sahu)
 [![codecov](https://codecov.io/gh/sk-sahu/sahu/branch/master/graph/badge.svg)](https://codecov.io/gh/sk-sahu/sahu)
-[![Install with Anaconda][bioconda-badge]](https://anaconda.org/sangram_keshari/r-sahu)
+[![Install with Anaconda][bioconda-badge]](https://anaconda.org/sksahu/r-sahu)
+<!-- badges: end -->
 
 ## Utility functions and APIs library
 Compilation of some utility and wraper functions, along with API calls use in daily tasks.

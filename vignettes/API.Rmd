@@ -13,11 +13,11 @@ server: https://sk-sahu.ocpu.io/sahu/R/
 
 ## API Endpoints
 
-| Function | Method | Description | 
+| Function | Resource | Description | 
 |----------|--------|-------------|
-| `getGeneinfo()` |GET getGeneinfo/:ensembl_id | Retrive gene info from diffrent DB |
+| `getGeneinfo()` | [POST getGeneinfo/:ensembl_id=''] | Retrive gene info from diffrent DB |
 
-Example
+### POST getGeneinfo/:ensembl_id=''
 ```
-curl https://sk-sahu.ocpu.io/sahu/R/getGeneinfo -d "ensembl_id='ENSG00000157764'"
+curl https://sk-sahu.ocpu.io/sahu/R/getGeneinfo/ -d "ensembl_id='ENSG00000157764'"
 ```
